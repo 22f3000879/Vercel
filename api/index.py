@@ -31,7 +31,7 @@ async def root():
 async def get_latency_stats(request: Request):
     payload = await request.json()
     regions_to_process = payload.get("regions", [])
-    threshold = payload.get("threshold_ms", 200)
+    threshold = payload.get("threshold_ms", 180)
 
     results = []
 
